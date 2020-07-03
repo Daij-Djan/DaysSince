@@ -17,6 +17,7 @@
 		B381A45A24A82E08002B86C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B381A45824A82E08002B86C0 /* MainMenu.xib */; };
 		B381A46324A83BCE002B86C0 /* Date+daysSince.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A46224A83BCE002B86C0 /* Date+daysSince.swift */; };
 		B381A46524A841F8002B86C0 /* DesktopHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A46424A841F8002B86C0 /* DesktopHandling.swift */; };
+		B386753E24AECAE100BF4CBC /* AmIBeingDebugged.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386753D24AECAE100BF4CBC /* AmIBeingDebugged.swift */; };
 		B38A239324AC5A30009B41F5 /* StatusBarHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A239224AC5A30009B41F5 /* StatusBarHandling.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		B381A45C24A82E08002B86C0 /* DaysSince.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysSince.entitlements; sourceTree = "<group>"; };
 		B381A46224A83BCE002B86C0 /* Date+daysSince.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+daysSince.swift"; sourceTree = "<group>"; };
 		B381A46424A841F8002B86C0 /* DesktopHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopHandling.swift; sourceTree = "<group>"; };
+		B386753D24AECAE100BF4CBC /* AmIBeingDebugged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmIBeingDebugged.swift; sourceTree = "<group>"; };
 		B38A239224AC5A30009B41F5 /* StatusBarHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarHandling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				B381A46224A83BCE002B86C0 /* Date+daysSince.swift */,
 				B34AA64724ADB214000C2E0E /* LaunchAtLogin.swift */,
 				B381A46724A851D9002B86C0 /* Resources */,
+				B386753D24AECAE100BF4CBC /* AmIBeingDebugged.swift */,
 			);
 			path = DaysSince;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B381A46324A83BCE002B86C0 /* Date+daysSince.swift in Sources */,
+				B386753E24AECAE100BF4CBC /* AmIBeingDebugged.swift in Sources */,
 				B381A45524A82E08002B86C0 /* AppDelegate.swift in Sources */,
 				B381A46524A841F8002B86C0 /* DesktopHandling.swift in Sources */,
 				B34AA64824ADB214000C2E0E /* LaunchAtLogin.swift in Sources */,

@@ -31,10 +31,12 @@ fileprivate final class Window: NSWindow {
     ignoresMouseEvents = true
     backgroundColor = .clear
     collectionBehavior = [.stationary, .canJoinAllSpaces]
-    #if DEBUG
-    print("keep window normal for easier debugging")
-    #else
     level = .init(rawValue: NSWindow.Level.normal.rawValue - 1)
+    #if DEBUG
+    if AmIBeingDebugged() {
+      print("keep window normal for easier debugging")
+      level = .normal
+    }
     #endif
   }
 }
