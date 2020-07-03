@@ -8,16 +8,41 @@
 import Cocoa
 
 @NSApplicationMain
-final class AppDelegate: NSObject, NSApplicationDelegate {
-  //made in
-  @IBOutlet private var prefsWindow: NSWindow!
-  private var settings: Settings!
-  private var statusBarItemHandler: StatusBarItemHandler!
-  private var desktopWindowHandler: DesktopWindowHandler!
-    
+class AppDelegate: NSObject, NSApplicationDelegate {
+  @IBOutlet private var prefsWindow: NSWindow?
+  private let settings = Settings()
+  private let statusBarItemHandler = StatusBarItemHandler()
+  private let desktopWindowHandler = DesktopWindowHandler()
+      
+  // MARK: NSApplicationDelegate
+  
+  func applicationDidFinishLaunching(_ aNotification: Notification) {
+    //init UI
+    statusBarItemHandler.menu = NSApp.mainMenu?.items.first?.submenu
+    desktopWindowHandler.enabled = true
+
+    //if we toggle dock icon visibility, osx hides our windows. dont let it
+    for window in NSApp.windows {
+      window.canHide = false
+    }
+
+    //prepare settings
+    settings.observe { switch($0) {
+      case .scale, .date, .direction:               self.updateUI()
+      case .dockIcon, .statusBarItem, .openAtLogin: self.updateAppSettings()
+    }}
+
+    //show prefs if needed
+    if settings.isEmpty {
+      showPrefs(self)
+    }
+  }
+  
+  //MARK: helpers
+  
   @IBAction private func showPrefs(_:Any) {
     NSApp.activate(ignoringOtherApps: true)
-    prefsWindow.makeKeyAndOrderFront(self)
+    prefsWindow?.makeKeyAndOrderFront(self)
   }
   
   private func updateUI() {
@@ -39,27 +64,5 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
       LaunchAtLogin.isEnabled = shouldOpenAtLogin
     }
   }
-  
-  // MARK: NSApplicationDelegate
-  
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
-    //prepare settings
-    settings = Settings() { switch($0) {
-      case .scale, .date, .direction:               self.updateUI()
-      case .dockIcon, .statusBarItem, .openAtLogin: self.updateAppSettings()
-    }}
 
-    //init UI
-    statusBarItemHandler = StatusBarItemHandler(NSApp.mainMenu?.items.first?.submenu)
-    desktopWindowHandler = DesktopWindowHandler()
-    //show prefs if needed
-    if settings.isEmpty {
-      showPrefs(self)
-    }
-    
-    //if we toggle dock icon visibility, osx hides our windows. dont let it
-    for window in NSApp.windows {
-      window.canHide = false
-    }
-  }
 }

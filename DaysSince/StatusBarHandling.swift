@@ -7,39 +7,40 @@
 
 import Cocoa
 
-final class StatusBarItemHandler: NSObject {
-  private let statusBarIconSize = 22
-  
-  private var statusBarItem: NSStatusItem!
-  private var menu: NSMenu?
-  
-  init(_ menu: NSMenu?) {
-    super.init()
-    self.menu = menu
-    makeItem()
-  }
+//MARK: constants
+fileprivate let statusBarIconSize = 22
+
+class StatusBarItemHandler: NSObject {
+  private var statusBarItem: NSStatusItem?
   
   private func makeItem() {
-    statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     statusBarItem.menu = menu
     
     let image = NSImage(named: "StatusBarIcon")
     image?.size = NSSize(width: statusBarIconSize, height: statusBarIconSize)
     statusBarItem.button?.image = image
     statusBarItem.button?.imagePosition = .imageLeading
-    
     statusBarItem.button?.title = "Day \(daysToMark)"
+    
+    self.statusBarItem = statusBarItem
   }
   
   // MARK: public
   
+  var menu: NSMenu? {
+    didSet {
+      statusBarItem?.menu = menu
+    }
+  }
+  
   var daysToMark: Int = 0 {
     didSet {
-      statusBarItem.button?.title = "Day \(daysToMark)"
+      statusBarItem?.button?.title = "Day \(daysToMark)"
     }
   }
 
-  var enabled: Bool = true {
+  var enabled: Bool = false {
     didSet {
       if enabled {
         makeItem()

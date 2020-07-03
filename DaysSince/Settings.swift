@@ -33,7 +33,7 @@ fileprivate extension UserDefaults {
   }
 }
 
-final class Settings: NSObject {
+class Settings: NSObject {
   enum SettingsKey {
     case date
     case scale
@@ -43,25 +43,19 @@ final class Settings: NSObject {
     case openAtLogin
   }
   
-  private var handler: ((SettingsKey) -> Void)!
   private var tokens = [NSKeyValueObservation?]()
   
-  init(_ handler: @escaping (SettingsKey) -> Void ) {
-    self.handler = handler
-    super.init()
-    
-    DispatchQueue.main.async {
-      self.observeSetting(\.date, .date)
-      self.observeSetting(\.scale, .scale)
-      self.observeSetting(\.direction, .direction)
-      self.observeSetting(\.dockIcon, .dockIcon)
-      self.observeSetting(\.statusBarItem, .statusBarItem)
-      self.observeSetting(\.openAtLogin, .openAtLogin)
-    }
+  func observe(_ handler: @escaping (SettingsKey) -> Void) {
+    self.observeSetting(\.date, handler, .date)
+    self.observeSetting(\.scale, handler, .scale)
+    self.observeSetting(\.direction, handler, .direction)
+    self.observeSetting(\.dockIcon, handler, .dockIcon)
+    self.observeSetting(\.statusBarItem, handler, .statusBarItem)
+    self.observeSetting(\.openAtLogin, handler, .openAtLogin)
   }
   
-  private func observeSetting<Value>(_ path: KeyPath<UserDefaults, Value>, _ key: SettingsKey) {
-    let token = UserDefaults.standard.observe(path, options: [.initial, .new]) { _,_ in self.handler(key) }
+  private func observeSetting<Value>(_ path: KeyPath<UserDefaults, Value>, _ handler: @escaping ((SettingsKey) -> Void), _ key: SettingsKey) {
+    let token = UserDefaults.standard.observe(path, options: [.initial, .new]) { _,_ in handler(key) }
     tokens.append(token)
   }
   

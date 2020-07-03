@@ -8,10 +8,11 @@
 import Foundation
 import ServiceManagement
 
-public struct LaunchAtLogin {
-  private static let launcherIdentifier = "\(Bundle.main.bundleIdentifier!)Launcher"
+//MARK: constants
+fileprivate let launcherIdentifier = "\(Bundle.main.bundleIdentifier!)Launcher"
 
-  public static var isEnabled: Bool {
+struct LaunchAtLogin {
+  static var isEnabled: Bool {
     get {
       guard let enabledLauncher = UserDefaults.standard.string(forKey: "enabledLauncher") else {
         return false
