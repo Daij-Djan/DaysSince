@@ -9,12 +9,13 @@ import Cocoa
 
 @NSApplicationMain
 final class AppDelegate: NSObject, NSApplicationDelegate {
+  //made in
   @IBOutlet private var prefsWindow: NSWindow!
   private var settings: Settings!
   private var statusBarItemHandler: StatusBarItemHandler!
   private var desktopWindowHandler: DesktopWindowHandler!
     
-  private func showPrefs() {
+  @IBAction private func showPrefs(_:Any) {
     NSApp.activate(ignoringOtherApps: true)
     prefsWindow.makeKeyAndOrderFront(self)
   }
@@ -49,11 +50,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     }}
 
     //init UI
-    statusBarItemHandler = StatusBarItemHandler() { self.showPrefs() }
+    statusBarItemHandler = StatusBarItemHandler(NSApp.mainMenu?.items.first?.submenu)
     desktopWindowHandler = DesktopWindowHandler()
     //show prefs if needed
     if settings.isEmpty {
-      showPrefs()
+      showPrefs(self)
     }
     
     //if we toggle dock icon visibility, osx hides our windows. dont let it

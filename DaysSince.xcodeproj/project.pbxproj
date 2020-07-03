@@ -134,8 +134,8 @@
 				B381A46424A841F8002B86C0 /* DesktopHandling.swift */,
 				B381A46224A83BCE002B86C0 /* Date+daysSince.swift */,
 				B34AA64724ADB214000C2E0E /* LaunchAtLogin.swift */,
-				B381A46724A851D9002B86C0 /* Resources */,
 				B386753D24AECAE100BF4CBC /* AmIBeingDebugged.swift */,
+				B381A46724A851D9002B86C0 /* Resources */,
 			);
 			path = DaysSince;
 			sourceTree = "<group>";

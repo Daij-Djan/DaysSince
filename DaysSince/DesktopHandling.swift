@@ -14,7 +14,9 @@ fileprivate final class Cell: NSCollectionViewItem {
   }
   
   func update(imageSetPrefix: Int, daysToMark: Int) {
-    (view as? NSImageView)?.image = imageForIndexPath(imageSetPrefix, daysToMark)
+    if let imageView = view as? NSImageView {
+      imageView.image = imageForIndexPath(imageSetPrefix, daysToMark)
+    }
   }
 
   private func imageForIndexPath(_ imageSetPrefix: Int, _ daysToMark: Int) -> NSImage? {
@@ -32,6 +34,7 @@ fileprivate final class Window: NSWindow {
     backgroundColor = .clear
     collectionBehavior = [.stationary, .canJoinAllSpaces]
     level = .init(rawValue: NSWindow.Level.normal.rawValue - 1)
+    
     #if DEBUG
     if AmIBeingDebugged() {
       print("keep window normal for easier debugging")
