@@ -55,5 +55,10 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     if settings.isEmpty {
       showPrefs()
     }
+    
+    //if we toggle dock icon visibility, osx hides our windows. dont let it
+    for window in NSApp.windows {
+      window.canHide = false
+    }
   }
 }
