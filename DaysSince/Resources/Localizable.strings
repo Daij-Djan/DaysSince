@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  DaysSince
+
+  Created by Dominik Pich on 7/6/20.
+  
+*/
+
+"Day %d" = "Day %d";

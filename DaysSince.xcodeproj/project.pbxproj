@@ -7,18 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B34AA64824ADB214000C2E0E /* LaunchAtLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34AA64724ADB214000C2E0E /* LaunchAtLogin.swift */; };
+		B34AA64824ADB214000C2E0E /* LaunchAtLoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34AA64724ADB214000C2E0E /* LaunchAtLoginUtils.swift */; };
 		B34DDA6024ADAA6E00EC70E9 /* DaysSinceLauncher.app in Resources */ = {isa = PBXBuildFile; fileRef = B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */; };
 		B34DDA6424ADAAB100EC70E9 /* DaysSinceLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B34DDA6624ADAC7700EC70E9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34DDA6524ADAC7700EC70E9 /* main.swift */; };
-		B36111D624AD6E1B0020922F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36111D524AD6E1B0020922F /* Settings.swift */; };
+		B36111D624AD6E1B0020922F /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36111D524AD6E1B0020922F /* UserDefaultsUtils.swift */; };
 		B381A45524A82E08002B86C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A45424A82E08002B86C0 /* AppDelegate.swift */; };
 		B381A45724A82E08002B86C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B381A45624A82E08002B86C0 /* Assets.xcassets */; };
 		B381A45A24A82E08002B86C0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B381A45824A82E08002B86C0 /* MainMenu.xib */; };
-		B381A46324A83BCE002B86C0 /* Date+daysSince.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A46224A83BCE002B86C0 /* Date+daysSince.swift */; };
-		B381A46524A841F8002B86C0 /* DesktopHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A46424A841F8002B86C0 /* DesktopHandling.swift */; };
-		B386753E24AECAE100BF4CBC /* DebuggerAttached.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386753D24AECAE100BF4CBC /* DebuggerAttached.swift */; };
-		B38A239324AC5A30009B41F5 /* StatusBarHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A239224AC5A30009B41F5 /* StatusBarHandling.swift */; };
+		B381A46324A83BCE002B86C0 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A46224A83BCE002B86C0 /* DateUtils.swift */; };
+		B381A46524A841F8002B86C0 /* DesktopWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A46424A841F8002B86C0 /* DesktopWindowController.swift */; };
+		B386753E24AECAE100BF4CBC /* DebuggerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386753D24AECAE100BF4CBC /* DebuggerUtils.swift */; };
+		B38A239324AC5A30009B41F5 /* StatusBarItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38A239224AC5A30009B41F5 /* StatusBarItemController.swift */; };
+		B3E799D024B39E8A0025BC01 /* MarkingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E799CF24B39E8A0025BC01 /* MarkingsViewController.swift */; };
+		B3E799D424B3AA810025BC01 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3E799D324B3AA810025BC01 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,22 +47,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B34AA64724ADB214000C2E0E /* LaunchAtLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLogin.swift; sourceTree = "<group>"; };
+		B34AA64724ADB214000C2E0E /* LaunchAtLoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginUtils.swift; sourceTree = "<group>"; };
 		B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysSinceLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34DDA5A24ADA9F000EC70E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B34DDA5B24ADA9F000EC70E9 /* DaysSinceLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysSinceLauncher.entitlements; sourceTree = "<group>"; };
 		B34DDA6524ADAC7700EC70E9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B36111D524AD6E1B0020922F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		B36111D524AD6E1B0020922F /* UserDefaultsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtils.swift; sourceTree = "<group>"; };
 		B381A45124A82E08002B86C0 /* DaysSince.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysSince.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B381A45424A82E08002B86C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B381A45624A82E08002B86C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B381A45924A82E08002B86C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B381A45B24A82E08002B86C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B381A45C24A82E08002B86C0 /* DaysSince.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysSince.entitlements; sourceTree = "<group>"; };
-		B381A46224A83BCE002B86C0 /* Date+daysSince.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+daysSince.swift"; sourceTree = "<group>"; };
-		B381A46424A841F8002B86C0 /* DesktopHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopHandling.swift; sourceTree = "<group>"; };
-		B386753D24AECAE100BF4CBC /* DebuggerAttached.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerAttached.swift; sourceTree = "<group>"; };
-		B38A239224AC5A30009B41F5 /* StatusBarHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarHandling.swift; sourceTree = "<group>"; };
+		B381A46224A83BCE002B86C0 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		B381A46424A841F8002B86C0 /* DesktopWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopWindowController.swift; sourceTree = "<group>"; };
+		B386753D24AECAE100BF4CBC /* DebuggerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerUtils.swift; sourceTree = "<group>"; };
+		B38A239224AC5A30009B41F5 /* StatusBarItemController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarItemController.swift; sourceTree = "<group>"; };
+		B3E799CF24B39E8A0025BC01 /* MarkingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkingsViewController.swift; sourceTree = "<group>"; };
+		B3E799D324B3AA810025BC01 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +133,13 @@
 			isa = PBXGroup;
 			children = (
 				B381A45424A82E08002B86C0 /* AppDelegate.swift */,
-				B36111D524AD6E1B0020922F /* Settings.swift */,
-				B38A239224AC5A30009B41F5 /* StatusBarHandling.swift */,
-				B381A46424A841F8002B86C0 /* DesktopHandling.swift */,
-				B381A46224A83BCE002B86C0 /* Date+daysSince.swift */,
-				B34AA64724ADB214000C2E0E /* LaunchAtLogin.swift */,
-				B386753D24AECAE100BF4CBC /* DebuggerAttached.swift */,
+				B38A239224AC5A30009B41F5 /* StatusBarItemController.swift */,
+				B381A46424A841F8002B86C0 /* DesktopWindowController.swift */,
+				B3E799CF24B39E8A0025BC01 /* MarkingsViewController.swift */,
+				B34AA64724ADB214000C2E0E /* LaunchAtLoginUtils.swift */,
+				B36111D524AD6E1B0020922F /* UserDefaultsUtils.swift */,
+				B386753D24AECAE100BF4CBC /* DebuggerUtils.swift */,
+				B381A46224A83BCE002B86C0 /* DateUtils.swift */,
 				B381A46724A851D9002B86C0 /* Resources */,
 			);
 			path = DaysSince;
@@ -147,6 +152,7 @@
 				B381A45824A82E08002B86C0 /* MainMenu.xib */,
 				B381A45B24A82E08002B86C0 /* Info.plist */,
 				B381A45C24A82E08002B86C0 /* DaysSince.entitlements */,
+				B3E799D324B3AA810025BC01 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B381A45724A82E08002B86C0 /* Assets.xcassets in Resources */,
+				B3E799D424B3AA810025BC01 /* Localizable.strings in Resources */,
 				B381A45A24A82E08002B86C0 /* MainMenu.xib in Resources */,
 				B34DDA6024ADAA6E00EC70E9 /* DaysSinceLauncher.app in Resources */,
 			);
@@ -259,13 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B381A46324A83BCE002B86C0 /* Date+daysSince.swift in Sources */,
-				B386753E24AECAE100BF4CBC /* DebuggerAttached.swift in Sources */,
+				B381A46324A83BCE002B86C0 /* DateUtils.swift in Sources */,
+				B386753E24AECAE100BF4CBC /* DebuggerUtils.swift in Sources */,
 				B381A45524A82E08002B86C0 /* AppDelegate.swift in Sources */,
-				B381A46524A841F8002B86C0 /* DesktopHandling.swift in Sources */,
-				B34AA64824ADB214000C2E0E /* LaunchAtLogin.swift in Sources */,
-				B38A239324AC5A30009B41F5 /* StatusBarHandling.swift in Sources */,
-				B36111D624AD6E1B0020922F /* Settings.swift in Sources */,
+				B381A46524A841F8002B86C0 /* DesktopWindowController.swift in Sources */,
+				B34AA64824ADB214000C2E0E /* LaunchAtLoginUtils.swift in Sources */,
+				B3E799D024B39E8A0025BC01 /* MarkingsViewController.swift in Sources */,
+				B38A239324AC5A30009B41F5 /* StatusBarItemController.swift in Sources */,
+				B36111D624AD6E1B0020922F /* UserDefaultsUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +464,7 @@
 				CODE_SIGN_ENTITLEMENTS = DaysSince/Resources/DaysSince.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3GNH676UZ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DaysSince/Resources/Info.plist;
@@ -478,6 +487,7 @@
 				CODE_SIGN_ENTITLEMENTS = DaysSince/Resources/DaysSince.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 3GNH676UZ5;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DaysSince/Resources/Info.plist;

@@ -8,61 +8,63 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject {
   @IBOutlet private var prefsWindow: NSWindow?
-  private let settings = Settings()
-  private let statusBarItemHandler = StatusBarItemHandler()
-  private let desktopWindowHandler = DesktopWindowHandler()
-      
-  // MARK: NSApplicationDelegate
-  
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
-    //init UI
-    statusBarItemHandler.menu = NSApp.mainMenu?.items.first?.submenu
-    desktopWindowHandler.enabled = true
+  private lazy var statusBarItemController = StatusBarItemController()
+  private lazy var desktopWindowController = DesktopWindowController()
 
-    //if we toggle dock icon visibility, osx hides our windows. dont let it
-    for window in NSApp.windows {
-      window.canHide = false
-    }
-
-    //prepare settings
-    settings.observe { switch($0) {
-      case .scale, .date, .direction:               self.updateUI()
-      case .dockIcon, .statusBarItem, .openAtLogin: self.updateAppSettings()
-    }}
-
-    //show prefs if needed
-    if settings.isEmpty {
-      showPrefs(self)
-    }
-  }
-  
-  //MARK: helpers
-  
   @IBAction private func showPrefs(_:Any) {
     NSApp.activate(ignoringOtherApps: true)
     prefsWindow?.makeKeyAndOrderFront(self)
   }
-  
-  private func updateUI() {
-    let days = settings.daysToMark
-    statusBarItemHandler.daysToMark = days
-    desktopWindowHandler.daysToMark = days
-    desktopWindowHandler.scalingFactor = settings.scalingFactor
-    desktopWindowHandler.direction = settings.direction
+}
+
+extension AppDelegate: NSApplicationDelegate {
+  func applicationDidFinishLaunching(_ aNotification: Notification) {
+    //prepare our UI Windows
+    statusBarItemController.menu = NSApp.mainMenu?.items.first?.submenu
+    desktopWindowController.enabled = true
+
+    //Workaround for dock icon visibility toggle: osx hides our windows on becoming .accessory. dont let it
+    for window in NSApp.windows {
+      window.canHide = false
+    }
+    
+    //prepare settings
+    UserDefaults.standard.applyInitialValues()
+    UserDefaults.standard.beginObservingKeys(observer: self)
+    
+    //show prefs if needed
+    if UserDefaults.standard.firstRun {
+      UserDefaults.standard.firstRun = false
+      showPrefs(self)
+    }
   }
   
-  private func updateAppSettings() {
-    NSApp.setActivationPolicy(settings.showDockIcon ? .regular : .accessory)
-    NSApp.activate(ignoringOtherApps: true)
-    
-    statusBarItemHandler.enabled = settings.showStatusBarItem
+  func applicationWillTerminate(_ notification: Notification) {
+    UserDefaults.standard.endObservingKeys(observer: self)
+  }
+}
 
-    let shouldOpenAtLogin = settings.shouldOpenAtLogin
+extension AppDelegate {
+  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    //apply dock icon
+    NSApp.setActivationPolicy(UserDefaults.standard.dockIcon ? .regular : .accessory)
+    NSApp.activate(ignoringOtherApps: true)
+
+    //update statusbar
+    statusBarItemController.daysToMark = Date().daysSince(UserDefaults.standard.date)
+    statusBarItemController.enabled = UserDefaults.standard.statusBarItem
+
+    //manage Start at Login
+    let shouldOpenAtLogin = UserDefaults.standard.openAtLogin
     if LaunchAtLogin.isEnabled != shouldOpenAtLogin {
       LaunchAtLogin.isEnabled = shouldOpenAtLogin
     }
-  }
 
+    //update desktop window
+    desktopWindowController.daysToMark = Date().daysSince(UserDefaults.standard.date)
+    desktopWindowController.scalingFactor = UserDefaults.standard.scale
+    desktopWindowController.direction = UserDefaults.standard.direction
+  }
 }

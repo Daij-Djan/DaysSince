@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17132" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -57,7 +57,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-ch-RY3">
-                        <rect key="frame" x="18" y="306" width="141" height="16"/>
+                        <rect key="frame" x="18" y="305" width="141" height="16"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Scale Of Markings:" id="JRG-A3-LEN">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -65,7 +65,7 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZqQ-AW-nJm">
-                        <rect key="frame" x="242" y="300" width="101" height="19"/>
+                        <rect key="frame" x="242" y="302" width="101" height="19"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="97" id="Zrg-15-G4W"/>
                         </constraints>
@@ -156,21 +156,8 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TOn-AC-Tyi">
-                        <rect key="frame" x="188" y="269" width="155" height="24"/>
-                        <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="z4u-en-r5J">
-                            <font key="font" metaFont="system"/>
-                            <segments>
-                                <segment label="Horizontal" selected="YES"/>
-                                <segment label="Vertical" tag="1"/>
-                            </segments>
-                        </segmentedCell>
-                        <connections>
-                            <binding destination="zX6-4Q-WqJ" name="selectedTag" keyPath="values.direction" id="eQF-OU-nk2"/>
-                        </connections>
-                    </segmentedControl>
                     <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="30u-mE-raZ">
-                        <rect key="frame" x="229" y="334" width="100" height="28"/>
+                        <rect key="frame" x="244" y="334" width="100" height="28"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="lfh-ex-RlU">
                             <font key="font" metaFont="system"/>
                             <date key="date" timeIntervalSinceReferenceDate="0.0">
@@ -194,10 +181,7 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="CSm-VV-wo3"/>
                         </constraints>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="7j8-4G-i3i"/>
-                        <connections>
-                            <binding destination="-3" name="value" keyPath="applicationIconImage" id="Rk7-tq-04I"/>
-                        </connections>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="prefsIcon" id="7j8-4G-i3i"/>
                     </imageView>
                     <box translatesAutoresizingMaskIntoConstraints="NO" id="yWr-Hp-PAc">
                         <rect key="frame" x="17" y="16" width="327" height="96"/>
@@ -333,10 +317,23 @@
                             </subviews>
                         </view>
                     </box>
+                    <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TOn-AC-Tyi">
+                        <rect key="frame" x="167" y="269" width="176" height="24"/>
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="z4u-en-r5J">
+                            <font key="font" metaFont="system"/>
+                            <segments>
+                                <segment label="Horizontal" selected="YES"/>
+                                <segment label="Vertical" tag="1"/>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <binding destination="zX6-4Q-WqJ" name="selectedTag" keyPath="values.direction" id="eQF-OU-nk2"/>
+                        </connections>
+                    </segmentedControl>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ZqQ-AW-nJm" firstAttribute="leading" secondItem="7cN-ch-RY3" secondAttribute="trailing" constant="87" id="22u-k7-liK"/>
-                    <constraint firstItem="30u-mE-raZ" firstAttribute="leading" secondItem="aWI-OH-OLO" secondAttribute="trailing" constant="72" id="32p-Nu-Ah7"/>
+                    <constraint firstItem="30u-mE-raZ" firstAttribute="leading" secondItem="aWI-OH-OLO" secondAttribute="trailing" constant="87" id="32p-Nu-Ah7"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gNx-6D-4hk" secondAttribute="trailing" constant="20" symbolic="YES" id="4jt-a8-saJ"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="leading" secondItem="Jbh-FR-6ry" secondAttribute="leading" id="5zT-qu-DEU"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="EQ1-kW-22h"/>
@@ -349,12 +346,12 @@
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="centerX" secondItem="yWr-Hp-PAc" secondAttribute="centerX" id="PD3-ix-r9Z"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="leading" secondItem="yWr-Hp-PAc" secondAttribute="leading" id="Pk7-uR-VAC"/>
                     <constraint firstItem="FK3-IZ-KcO" firstAttribute="top" secondItem="Jbh-FR-6ry" secondAttribute="bottom" constant="33" id="ROP-cd-vzl"/>
-                    <constraint firstItem="7cN-ch-RY3" firstAttribute="top" secondItem="aWI-OH-OLO" secondAttribute="bottom" constant="12" id="SKd-qA-7Fb"/>
+                    <constraint firstItem="7cN-ch-RY3" firstAttribute="top" secondItem="aWI-OH-OLO" secondAttribute="bottom" constant="13" id="SKd-qA-7Fb"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="136" id="UUH-DS-YlD"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="leading" secondItem="7cN-ch-RY3" secondAttribute="leading" id="Utb-oX-fPz"/>
                     <constraint firstItem="ZqQ-AW-nJm" firstAttribute="trailing" secondItem="TOn-AC-Tyi" secondAttribute="trailing" id="Wzc-T6-h9X"/>
                     <constraint firstItem="Jbh-FR-6ry" firstAttribute="baseline" secondItem="TOn-AC-Tyi" secondAttribute="baseline" id="Y7y-K8-ITZ"/>
-                    <constraint firstItem="TOn-AC-Tyi" firstAttribute="top" secondItem="ZqQ-AW-nJm" secondAttribute="bottom" constant="10" id="Y8F-v1-hoa"/>
+                    <constraint firstItem="TOn-AC-Tyi" firstAttribute="top" secondItem="ZqQ-AW-nJm" secondAttribute="bottom" constant="12" id="Y8F-v1-hoa"/>
                     <constraint firstItem="yWr-Hp-PAc" firstAttribute="trailing" secondItem="ZqQ-AW-nJm" secondAttribute="trailing" id="aTG-OT-gOd"/>
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="baseline" secondItem="C9C-mi-aQK" secondAttribute="baseline" id="ac5-3q-XNF"/>
                     <constraint firstAttribute="trailing" secondItem="FK3-IZ-KcO" secondAttribute="trailing" constant="135" id="bCI-MV-AII"/>
@@ -363,13 +360,13 @@
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="centerX" secondItem="EiT-Mj-1SZ" secondAttribute="centerX" id="hP0-kv-2Mv"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="trailing" secondItem="7cN-ch-RY3" secondAttribute="trailing" id="kop-X5-sLb"/>
                     <constraint firstAttribute="bottom" secondItem="KUA-qx-CUg" secondAttribute="bottom" constant="167" id="lyg-fI-gd2"/>
-                    <constraint firstItem="TOn-AC-Tyi" firstAttribute="leading" secondItem="Jbh-FR-6ry" secondAttribute="trailing" constant="33" id="n8y-3e-1z0"/>
+                    <constraint firstItem="TOn-AC-Tyi" firstAttribute="leading" secondItem="Jbh-FR-6ry" secondAttribute="trailing" constant="12" id="n8y-3e-1z0"/>
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="top" secondItem="p2h-9d-Nkl" secondAttribute="bottom" constant="12" id="o9Q-03-wb8"/>
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="leading" secondItem="C9C-mi-aQK" secondAttribute="leading" id="qxH-a5-Xwo"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="top" secondItem="Cld-tw-fGZ" secondAttribute="bottom" constant="16" id="rff-ne-7uT"/>
                     <constraint firstAttribute="bottom" secondItem="yWr-Hp-PAc" secondAttribute="bottom" constant="20" symbolic="YES" id="sXA-hv-URl"/>
                     <constraint firstItem="yWr-Hp-PAc" firstAttribute="top" secondItem="gNx-6D-4hk" secondAttribute="bottom" constant="29" id="u5o-OA-Dy5"/>
-                    <constraint firstItem="Jbh-FR-6ry" firstAttribute="top" secondItem="7cN-ch-RY3" secondAttribute="bottom" constant="16" id="xze-aL-kOa"/>
+                    <constraint firstItem="Jbh-FR-6ry" firstAttribute="top" secondItem="7cN-ch-RY3" secondAttribute="bottom" constant="15" id="xze-aL-kOa"/>
                     <constraint firstItem="aWI-OH-OLO" firstAttribute="trailing" secondItem="Jbh-FR-6ry" secondAttribute="trailing" id="yJr-lB-JoJ"/>
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="leading" secondItem="gNx-6D-4hk" secondAttribute="leading" id="zbc-Vg-a9v"/>
                 </constraints>
@@ -379,6 +376,6 @@
         <userDefaultsController representsSharedInstance="YES" id="zX6-4Q-WqJ"/>
     </objects>
     <resources>
-        <image name="NSApplicationIcon" width="32" height="32"/>
+        <image name="prefsIcon" width="256" height="256"/>
     </resources>
 </document>
