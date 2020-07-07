@@ -41,39 +41,36 @@ class MarkingsViewController: NSViewController {
     view = collectionView
   }
   
+  private var currentCollectionView : NSCollectionView? {
+    return view as? NSCollectionView
+  }
+  
+  private var currentFlowLayout : NSCollectionViewFlowLayout? {
+    return currentCollectionView?.collectionViewLayout as? NSCollectionViewFlowLayout
+  }
+  
   // MARK: public
   
   var daysToMark: Int = 0 {
     didSet {
-      guard let collectionView = view as? NSCollectionView else {
-        return;
-      }
-      collectionView.reloadData()
+      currentCollectionView?.reloadData()
     }
   }
   
   var scalingFactor: Double = 1.0 {
     didSet {
-      guard let cv = view as? NSCollectionView,
-            let flowLayout = cv.collectionViewLayout as? NSCollectionViewFlowLayout else {
-        return;
-      }
-      flowLayout.itemSize = NSSize(width: defaultItemSize * scalingFactor,
-                                   height: defaultItemSize * scalingFactor)
+      currentFlowLayout?.itemSize = NSSize(width: defaultItemSize * scalingFactor,
+                                           height: defaultItemSize * scalingFactor)
     }
   }
   
   var direction: FlowDirection = .flowHorizontally {
     didSet {
-      guard let cv = view as? NSCollectionView,
-            let flowLayout = cv.collectionViewLayout as? NSCollectionViewFlowLayout else {
-        return;
-      }
       switch(direction) {
       case .flowHorizontally:
-        flowLayout.scrollDirection = .vertical
+        currentFlowLayout?.scrollDirection = .vertical
       case .flowVertically:
-        flowLayout.scrollDirection = .horizontal
+        currentFlowLayout?.scrollDirection = .horizontal
       }
     }
   }

@@ -40,14 +40,14 @@ extension AppDelegate: NSApplicationDelegate {
       showPrefs(self)
     }
   }
-  
-  func applicationWillTerminate(_ notification: Notification) {
-    UserDefaults.standard.endObservingKeys(observer: self)
-  }
 }
 
 extension AppDelegate {
   override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    applySettings()
+  }
+  
+  private func applySettings() {
     //apply dock icon
     NSApp.setActivationPolicy(UserDefaults.standard.dockIcon ? .regular : .accessory)
     NSApp.activate(ignoringOtherApps: true)

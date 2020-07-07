@@ -10,32 +10,27 @@ import Cocoa
 struct DesktopWindowController {
   private var window : NSWindow?;
 
+  var currentMarkingsViewController : MarkingsViewController? {
+    return window?.contentViewController as? MarkingsViewController
+  }
+
   // MARK: public
   
   var daysToMark: Int = 0 {
     didSet {
-      guard let vc = window?.contentViewController as? MarkingsViewController else {
-        return;
-      }
-      vc.daysToMark = daysToMark
+      currentMarkingsViewController?.daysToMark = daysToMark
     }
   }
   
   var scalingFactor: Double = 1.0 {
     didSet {
-      guard let vc = window?.contentViewController as? MarkingsViewController else {
-        return;
-      }
-      vc.scalingFactor = scalingFactor
+      currentMarkingsViewController?.scalingFactor = scalingFactor
     }
   }
   
   var direction: FlowDirection = .flowHorizontally {
     didSet {
-      guard let vc = window?.contentViewController as? MarkingsViewController else {
-        return;
-      }
-      vc.direction = direction
+      currentMarkingsViewController?.direction = direction
     }
   }
 
