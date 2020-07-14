@@ -41,6 +41,11 @@ extension AppDelegate: NSApplicationDelegate {
       UserDefaults.standard.firstRun = false
       showPrefs(self)
     }
+    
+    //act on day change
+    NotificationCenter.default.addObserver(forName: NSNotification.Name.NSCalendarDayChanged, object: nil, queue: OperationQueue.main) { _ in
+      self.applySettings()
+    }
   }
 }
 
