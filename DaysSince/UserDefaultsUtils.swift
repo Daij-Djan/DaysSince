@@ -81,17 +81,27 @@ extension UserDefaults {
       Key.openAtLogin : false,
     ])
   }
+}
+
+extension UserDefaults {
+  typealias ChangeHandler = (_ keyPath: String?) -> Void
   
-  func beginObservingKeys(observer: NSObject) {
+  fileprivate static var storages = [UnsafeMutablePointer<ChangeHandler>]()
+
+  func addKeysObserver(handler: @escaping ChangeHandler) -> Void {
+    let storage = UnsafeMutablePointer<ChangeHandler>.allocate(capacity: 1)
+    storage.initialize(to: handler)
+    
+    UserDefaults.storages.append(storage)
+    
     for key in Key.all {
-      self.addObserver(observer, forKeyPath: key, options: [.initial, .new], context: nil)
+      self.addObserver(self, forKeyPath: key, options: [.initial, .new], context: storage)
     }
   }
   
-  func endObservingKeys(observer: NSObject) {
-    for key in Key.all {
-      self.removeObserver(observer, forKeyPath: key)
-    }
+  open override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    let handler = context.unsafelyUnwrapped.assumingMemoryBound(to: ChangeHandler.self).pointee
+    handler(keyPath)
   }
 }
 

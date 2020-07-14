@@ -32,7 +32,9 @@ extension AppDelegate: NSApplicationDelegate {
     
     //prepare settings
     UserDefaults.standard.applyInitialValues()
-    UserDefaults.standard.beginObservingKeys(observer: self)
+    UserDefaults.standard.addKeysObserver { _ in
+      self.applySettings()
+    }
     
     //show prefs if needed
     if UserDefaults.standard.firstRun {
@@ -43,10 +45,6 @@ extension AppDelegate: NSApplicationDelegate {
 }
 
 extension AppDelegate {
-  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-    applySettings()
-  }
-  
   private func applySettings() {
     //apply dock icon
     NSApp.setActivationPolicy(UserDefaults.standard.dockIcon ? .regular : .accessory)
