@@ -307,7 +307,7 @@
 				CODE_SIGN_ENTITLEMENTS = DaysSinceLauncher/Resources/DaysSinceLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3GNH676UZ5;
+				DEVELOPMENT_TEAM = 77B3U2EKEM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DaysSinceLauncher/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,7 +328,7 @@
 				CODE_SIGN_ENTITLEMENTS = DaysSinceLauncher/Resources/DaysSinceLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 3GNH676UZ5;
+				DEVELOPMENT_TEAM = 77B3U2EKEM;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = DaysSinceLauncher/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
