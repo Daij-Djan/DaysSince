@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B34DDA5024ADA9F000EC70E9"
-               BuildableName = "DaysSinceLauncher.app"
-               BlueprintName = "DaysSinceLauncher"
-               ReferencedContainer = "container:DaysSince.xcodeproj">
+               BlueprintIdentifier = "B381A45024A82E08002B86C0"
+               BuildableName = "NightsGoneBy.app"
+               BlueprintName = "NightsGoneBy"
+               ReferencedContainer = "container:NightsGoneBy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,10 +44,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B34DDA5024ADA9F000EC70E9"
-            BuildableName = "DaysSinceLauncher.app"
-            BlueprintName = "DaysSinceLauncher"
-            ReferencedContainer = "container:DaysSince.xcodeproj">
+            BlueprintIdentifier = "B381A45024A82E08002B86C0"
+            BuildableName = "NightsGoneBy.app"
+            BlueprintName = "NightsGoneBy"
+            ReferencedContainer = "container:NightsGoneBy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,10 +61,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B34DDA5024ADA9F000EC70E9"
-            BuildableName = "DaysSinceLauncher.app"
-            BlueprintName = "DaysSinceLauncher"
-            ReferencedContainer = "container:DaysSince.xcodeproj">
+            BlueprintIdentifier = "B381A45024A82E08002B86C0"
+            BuildableName = "NightsGoneBy.app"
+            BlueprintName = "NightsGoneBy"
+            ReferencedContainer = "container:NightsGoneBy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

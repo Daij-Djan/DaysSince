@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DaysSince
+//  NightsGoneBy
 //
 //  Created by Dominik Pich on 6/27/20.
 //
@@ -56,7 +56,7 @@ extension AppDelegate {
     NSApp.activate(ignoringOtherApps: true)
 
     //update statusbar
-    statusBarItemController.daysToMark = Date().daysSince(UserDefaults.standard.date)
+    statusBarItemController.daysToMark = Date().NightsGoneBy(UserDefaults.standard.date)
     statusBarItemController.enabled = UserDefaults.standard.statusBarItem
 
     //manage Start at Login
@@ -66,7 +66,7 @@ extension AppDelegate {
     }
 
     //update desktop window
-    desktopWindowController.daysToMark = Date().daysSince(UserDefaults.standard.date)
+    desktopWindowController.daysToMark = Date().NightsGoneBy(UserDefaults.standard.date)
     desktopWindowController.scalingFactor = UserDefaults.standard.scale
     desktopWindowController.direction = UserDefaults.standard.direction
   }

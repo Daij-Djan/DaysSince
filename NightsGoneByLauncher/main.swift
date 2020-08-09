@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  DaysSinceLauncher
+//  NightsGoneByLauncher
 //
 //  Created by Dominik Pich on 7/1/20.
 //

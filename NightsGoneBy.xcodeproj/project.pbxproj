@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B34AA64824ADB214000C2E0E /* LaunchAtLoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34AA64724ADB214000C2E0E /* LaunchAtLoginUtils.swift */; };
-		B34DDA6424ADAAB100EC70E9 /* DaysSinceLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B34DDA6424ADAAB100EC70E9 /* NightsGoneByLauncher.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = B34DDA5124ADA9F000EC70E9 /* NightsGoneByLauncher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B34DDA6624ADAC7700EC70E9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34DDA6524ADAC7700EC70E9 /* main.swift */; };
 		B36111D624AD6E1B0020922F /* UserDefaultsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36111D524AD6E1B0020922F /* UserDefaultsUtils.swift */; };
 		B381A45524A82E08002B86C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381A45424A82E08002B86C0 /* AppDelegate.swift */; };
@@ -28,7 +28,7 @@
 			containerPortal = B381A44924A82E08002B86C0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B34DDA5024ADA9F000EC70E9;
-			remoteInfo = DaysSinceLauncher;
+			remoteInfo = NightsGoneByLauncher;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -39,25 +39,28 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				B34DDA6424ADAAB100EC70E9 /* DaysSinceLauncher.app in CopyFiles */,
+				B34DDA6424ADAAB100EC70E9 /* NightsGoneByLauncher.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B313F68A24E07C6D00B7C4C3 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B313F68C24E07C6D00B7C4C3 /* cuisine.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cuisine.jpg; sourceTree = "<group>"; };
+		B313F68D24E07C6D00B7C4C3 /* screenshot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = screenshot.jpg; sourceTree = "<group>"; };
 		B34AA64724ADB214000C2E0E /* LaunchAtLoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAtLoginUtils.swift; sourceTree = "<group>"; };
-		B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysSinceLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B34DDA5124ADA9F000EC70E9 /* NightsGoneByLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightsGoneByLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B34DDA5A24ADA9F000EC70E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B34DDA5B24ADA9F000EC70E9 /* DaysSinceLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysSinceLauncher.entitlements; sourceTree = "<group>"; };
+		B34DDA5B24ADA9F000EC70E9 /* NightsGoneByLauncher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NightsGoneByLauncher.entitlements; sourceTree = "<group>"; };
 		B34DDA6524ADAC7700EC70E9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B36111D524AD6E1B0020922F /* UserDefaultsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsUtils.swift; sourceTree = "<group>"; };
-		B381A45124A82E08002B86C0 /* DaysSince.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaysSince.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B381A45124A82E08002B86C0 /* NightsGoneBy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightsGoneBy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B381A45424A82E08002B86C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B381A45624A82E08002B86C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B381A45924A82E08002B86C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		B381A45B24A82E08002B86C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B381A45C24A82E08002B86C0 /* DaysSince.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DaysSince.entitlements; sourceTree = "<group>"; };
+		B381A45C24A82E08002B86C0 /* NightsGoneBy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NightsGoneBy.entitlements; sourceTree = "<group>"; };
 		B381A46224A83BCE002B86C0 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		B381A46424A841F8002B86C0 /* DesktopWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesktopWindowController.swift; sourceTree = "<group>"; };
 		B386753D24AECAE100BF4CBC /* DebuggerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggerUtils.swift; sourceTree = "<group>"; };
@@ -84,13 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B34DDA5224ADA9F000EC70E9 /* DaysSinceLauncher */ = {
+		B313F68B24E07C6D00B7C4C3 /* README-Files */ = {
+			isa = PBXGroup;
+			children = (
+				B313F68C24E07C6D00B7C4C3 /* cuisine.jpg */,
+				B313F68D24E07C6D00B7C4C3 /* screenshot.jpg */,
+			);
+			path = "README-Files";
+			sourceTree = "<group>";
+		};
+		B34DDA5224ADA9F000EC70E9 /* NightsGoneByLauncher */ = {
 			isa = PBXGroup;
 			children = (
 				B34DDA6524ADAC7700EC70E9 /* main.swift */,
 				B34DDA6724ADACB800EC70E9 /* Resources */,
 			);
-			path = DaysSinceLauncher;
+			path = NightsGoneByLauncher;
 			sourceTree = "<group>";
 		};
 		B34DDA5F24ADAA6E00EC70E9 /* Frameworks */ = {
@@ -104,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B34DDA5A24ADA9F000EC70E9 /* Info.plist */,
-				B34DDA5B24ADA9F000EC70E9 /* DaysSinceLauncher.entitlements */,
+				B34DDA5B24ADA9F000EC70E9 /* NightsGoneByLauncher.entitlements */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -112,8 +124,10 @@
 		B381A44824A82E08002B86C0 = {
 			isa = PBXGroup;
 			children = (
-				B381A45324A82E08002B86C0 /* DaysSince */,
-				B34DDA5224ADA9F000EC70E9 /* DaysSinceLauncher */,
+				B381A45324A82E08002B86C0 /* NightsGoneBy */,
+				B34DDA5224ADA9F000EC70E9 /* NightsGoneByLauncher */,
+				B313F68B24E07C6D00B7C4C3 /* README-Files */,
+				B313F68A24E07C6D00B7C4C3 /* README.md */,
 				B381A45224A82E08002B86C0 /* Products */,
 				B34DDA5F24ADAA6E00EC70E9 /* Frameworks */,
 			);
@@ -122,13 +136,13 @@
 		B381A45224A82E08002B86C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B381A45124A82E08002B86C0 /* DaysSince.app */,
-				B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */,
+				B381A45124A82E08002B86C0 /* NightsGoneBy.app */,
+				B34DDA5124ADA9F000EC70E9 /* NightsGoneByLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B381A45324A82E08002B86C0 /* DaysSince */ = {
+		B381A45324A82E08002B86C0 /* NightsGoneBy */ = {
 			isa = PBXGroup;
 			children = (
 				B381A45424A82E08002B86C0 /* AppDelegate.swift */,
@@ -141,7 +155,7 @@
 				B381A46224A83BCE002B86C0 /* DateUtils.swift */,
 				B381A46724A851D9002B86C0 /* Resources */,
 			);
-			path = DaysSince;
+			path = NightsGoneBy;
 			sourceTree = "<group>";
 		};
 		B381A46724A851D9002B86C0 /* Resources */ = {
@@ -150,7 +164,7 @@
 				B381A45624A82E08002B86C0 /* Assets.xcassets */,
 				B381A45824A82E08002B86C0 /* MainMenu.xib */,
 				B381A45B24A82E08002B86C0 /* Info.plist */,
-				B381A45C24A82E08002B86C0 /* DaysSince.entitlements */,
+				B381A45C24A82E08002B86C0 /* NightsGoneBy.entitlements */,
 				B3E799D324B3AA810025BC01 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -159,9 +173,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B34DDA5024ADA9F000EC70E9 /* DaysSinceLauncher */ = {
+		B34DDA5024ADA9F000EC70E9 /* NightsGoneByLauncher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B34DDA5E24ADA9F000EC70E9 /* Build configuration list for PBXNativeTarget "DaysSinceLauncher" */;
+			buildConfigurationList = B34DDA5E24ADA9F000EC70E9 /* Build configuration list for PBXNativeTarget "NightsGoneByLauncher" */;
 			buildPhases = (
 				B34DDA4D24ADA9F000EC70E9 /* Sources */,
 				B34DDA4E24ADA9F000EC70E9 /* Frameworks */,
@@ -171,14 +185,14 @@
 			);
 			dependencies = (
 			);
-			name = DaysSinceLauncher;
-			productName = DaysSinceLauncher;
-			productReference = B34DDA5124ADA9F000EC70E9 /* DaysSinceLauncher.app */;
+			name = NightsGoneByLauncher;
+			productName = NightsGoneByLauncher;
+			productReference = B34DDA5124ADA9F000EC70E9 /* NightsGoneByLauncher.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B381A45024A82E08002B86C0 /* DaysSince */ = {
+		B381A45024A82E08002B86C0 /* NightsGoneBy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B381A45F24A82E08002B86C0 /* Build configuration list for PBXNativeTarget "DaysSince" */;
+			buildConfigurationList = B381A45F24A82E08002B86C0 /* Build configuration list for PBXNativeTarget "NightsGoneBy" */;
 			buildPhases = (
 				B381A44D24A82E08002B86C0 /* Sources */,
 				B381A44E24A82E08002B86C0 /* Frameworks */,
@@ -190,9 +204,9 @@
 			dependencies = (
 				B34DDA6224ADAA6E00EC70E9 /* PBXTargetDependency */,
 			);
-			name = DaysSince;
-			productName = DaysSince;
-			productReference = B381A45124A82E08002B86C0 /* DaysSince.app */;
+			name = NightsGoneBy;
+			productName = NightsGoneBy;
+			productReference = B381A45124A82E08002B86C0 /* NightsGoneBy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +226,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B381A44C24A82E08002B86C0 /* Build configuration list for PBXProject "DaysSince" */;
+			buildConfigurationList = B381A44C24A82E08002B86C0 /* Build configuration list for PBXProject "NightsGoneBy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,8 +239,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B381A45024A82E08002B86C0 /* DaysSince */,
-				B34DDA5024ADA9F000EC70E9 /* DaysSinceLauncher */,
+				B381A45024A82E08002B86C0 /* NightsGoneBy */,
+				B34DDA5024ADA9F000EC70E9 /* NightsGoneByLauncher */,
 			);
 		};
 /* End PBXProject section */
@@ -280,7 +294,7 @@
 /* Begin PBXTargetDependency section */
 		B34DDA6224ADAA6E00EC70E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B34DDA5024ADA9F000EC70E9 /* DaysSinceLauncher */;
+			target = B34DDA5024ADA9F000EC70E9 /* NightsGoneByLauncher */;
 			targetProxy = B34DDA6124ADAA6E00EC70E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -302,17 +316,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DaysSinceLauncher/Resources/DaysSinceLauncher.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NightsGoneByLauncher/Resources/NightsGoneByLauncher.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 77B3U2EKEM;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = DaysSinceLauncher/Resources/Info.plist;
+				INFOPLIST_FILE = NightsGoneByLauncher/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = info.pich.DaysSinceLauncher;
+				PRODUCT_BUNDLE_IDENTIFIER = info.pich.NightsGoneByLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -324,20 +338,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DaysSinceLauncher/Resources/DaysSinceLauncher.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = NightsGoneByLauncher/Resources/NightsGoneByLauncher.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 77B3U2EKEM;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = DaysSinceLauncher/Resources/Info.plist;
+				INFOPLIST_FILE = NightsGoneByLauncher/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = info.pich.DaysSinceLauncher;
+				PRODUCT_BUNDLE_IDENTIFIER = info.pich.NightsGoneByLauncher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "Helper for DaysSince - Develop";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -463,19 +477,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DaysSince/Resources/DaysSince.entitlements;
+				CODE_SIGN_ENTITLEMENTS = NightsGoneBy/Resources/NightsGoneBy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 77B3U2EKEM;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = DaysSince/Resources/Info.plist;
+				INFOPLIST_FILE = NightsGoneBy/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = info.pich.DaysSince;
+				PRODUCT_BUNDLE_IDENTIFIER = info.pich.NightsGoneBy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -486,22 +500,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DaysSince/Resources/DaysSince.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_ENTITLEMENTS = NightsGoneBy/Resources/NightsGoneBy.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 77B3U2EKEM;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = DaysSince/Resources/Info.plist;
+				INFOPLIST_FILE = NightsGoneBy/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				PRODUCT_BUNDLE_IDENTIFIER = info.pich.DaysSince;
+				PRODUCT_BUNDLE_IDENTIFIER = info.pich.NightsGoneBy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "DaysSince - Develop";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -509,7 +523,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B34DDA5E24ADA9F000EC70E9 /* Build configuration list for PBXNativeTarget "DaysSinceLauncher" */ = {
+		B34DDA5E24ADA9F000EC70E9 /* Build configuration list for PBXNativeTarget "NightsGoneByLauncher" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B34DDA5C24ADA9F000EC70E9 /* Debug */,
@@ -518,7 +532,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B381A44C24A82E08002B86C0 /* Build configuration list for PBXProject "DaysSince" */ = {
+		B381A44C24A82E08002B86C0 /* Build configuration list for PBXProject "NightsGoneBy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B381A45D24A82E08002B86C0 /* Debug */,
@@ -527,7 +541,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B381A45F24A82E08002B86C0 /* Build configuration list for PBXNativeTarget "DaysSince" */ = {
+		B381A45F24A82E08002B86C0 /* Build configuration list for PBXNativeTarget "NightsGoneBy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B381A46024A82E08002B86C0 /* Debug */,

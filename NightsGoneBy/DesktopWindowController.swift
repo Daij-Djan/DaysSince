@@ -1,6 +1,6 @@
 //
 //  DesktopWindowController.swift
-//  DaysSince
+//  NightsGoneBy
 //
 //  Created by Dominik Pich on 6/27/20.
 //
