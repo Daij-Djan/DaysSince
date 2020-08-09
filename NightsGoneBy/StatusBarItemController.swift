@@ -33,7 +33,7 @@ struct StatusBarItemController {
   
   var daysToMark: Int = 0 {
     didSet {
-      statusBarItem?.button?.title = "Day \(daysToMark)"
+      statusBarItem?.button?.title = self.title
     }
   }
 
