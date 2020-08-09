@@ -1,5 +1,5 @@
 # NightsGoneBy
-A small macos app to mark days passed 'prison style'. 
+A small macos app to mark nights gone by 'prison style'. 
 ![Screenshot](https://github.com/Daij-Djan/NightsGoneBy/raw/master/README-Files/screenshot.jpg)
 
 # (Un-)Related 
