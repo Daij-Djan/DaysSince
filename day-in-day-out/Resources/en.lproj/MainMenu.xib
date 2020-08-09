@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097.2"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,23 +13,23 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="DaysSince" customModuleProvider="target">
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="day_in_day_out" customModuleProvider="target">
             <connections>
                 <outlet property="prefsWindow" destination="QvC-M9-y7g" id="QfU-nk-Yl2"/>
             </connections>
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="NightsGoneBy" id="1Xt-HY-uBw">
+                <menuItem title="day-in-day-out" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="NightsGoneBy" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="day-in-day-out" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
                             <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
                                 <connections>
                                     <action selector="showPrefs" target="Voe-Tx-rLC" id="oaU-6M-ZVv"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Quit NightsGoneBy" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Quit day-in-day-out" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -39,16 +40,16 @@
             </items>
             <point key="canvasLocation" x="97" y="79"/>
         </menu>
-        <window title="Nights Gone By" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" userLabel="NightsGoneBy Preferences">
+        <window title="Nights Gone By" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g" userLabel="day-in-day-out Preferences">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="335" y="390" width="361" height="486"/>
+            <rect key="contentRect" x="335" y="390" width="394" height="486"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
-            <view key="contentView" misplaced="YES" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="388" height="486"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="394" height="486"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-OH-OLO">
-                        <rect key="frame" x="18" y="334" width="168" height="16"/>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-OH-OLO" userLabel="Mark Days Gone Since Date:">
+                        <rect key="frame" x="18" y="334" width="174" height="16"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Mark Nights Gone By Date:" id="ASS-Ry-9aA">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -56,7 +57,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-ch-RY3">
-                        <rect key="frame" x="18" y="305" width="168" height="16"/>
+                        <rect key="frame" x="18" y="305" width="174" height="16"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Scale Of Markings:" id="JRG-A3-LEN">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -64,11 +65,11 @@
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZqQ-AW-nJm">
-                        <rect key="frame" x="269" y="302" width="101" height="19"/>
+                        <rect key="frame" x="275" y="302" width="101" height="19"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="97" id="Zrg-15-G4W"/>
                         </constraints>
-                        <sliderCell key="cell" state="on" alignment="left" minValue="0.25" maxValue="5" doubleValue="1" tickMarkPosition="above" sliderType="linear" id="r6h-al-uvf"/>
+                        <sliderCell key="cell" state="on" alignment="left" minValue="0.25" maxValue="5" doubleValue="2" tickMarkPosition="above" sliderType="linear" id="r6h-al-uvf"/>
                         <connections>
                             <binding destination="zX6-4Q-WqJ" name="value" keyPath="values.scale" id="4BX-On-2gw">
                                 <dictionary key="options">
@@ -78,10 +79,10 @@
                         </connections>
                     </slider>
                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="FK3-IZ-KcO">
-                        <rect key="frame" x="130" y="238" width="123" height="5"/>
+                        <rect key="frame" x="130" y="238" width="129" height="5"/>
                     </box>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-9d-Nkl">
-                        <rect key="frame" x="86" y="191" width="193" height="18"/>
+                        <rect key="frame" x="89" y="191" width="193" height="18"/>
                         <buttonCell key="cell" type="check" title="App Should Show Dock Icon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9DQ-g6-xpG">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -95,7 +96,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C9C-mi-aQK" userLabel="ENABLED - App Should Show Menubar Icon">
-                        <rect key="frame" x="86" y="165" width="216" height="18"/>
+                        <rect key="frame" x="89" y="165" width="216" height="18"/>
                         <buttonCell key="cell" type="check" title="App Should Show Menubar Icon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KMg-VS-W4d">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -120,7 +121,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-qx-CUg" userLabel="DISABLED  - App Should Show Menubar Icon">
-                        <rect key="frame" x="86" y="165" width="216" height="18"/>
+                        <rect key="frame" x="89" y="165" width="216" height="18"/>
                         <buttonCell key="cell" type="check" title="App Should Show Menubar Icon" bezelStyle="regularSquare" imagePosition="left" enabled="NO" state="on" inset="2" id="DmC-nH-WrN">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -134,7 +135,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNx-6D-4hk">
-                        <rect key="frame" x="86" y="139" width="182" height="18"/>
+                        <rect key="frame" x="89" y="139" width="182" height="18"/>
                         <buttonCell key="cell" type="check" title="App Should Open At Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="c1S-dC-V5g">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -148,7 +149,7 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-FR-6ry">
-                        <rect key="frame" x="18" y="274" width="168" height="16"/>
+                        <rect key="frame" x="18" y="274" width="174" height="16"/>
                         <textFieldCell key="cell" lineBreakMode="clipping" title="Marks Flow Direction:" id="12N-hg-gmd">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -156,11 +157,11 @@
                         </textFieldCell>
                     </textField>
                     <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="30u-mE-raZ">
-                        <rect key="frame" x="271" y="334" width="100" height="28"/>
+                        <rect key="frame" x="277" y="334" width="100" height="28"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="lfh-ex-RlU">
                             <font key="font" metaFont="system"/>
-                            <date key="date" timeIntervalSinceReferenceDate="0.0">
-                                <!--2001-01-01 00:00:00 +0000-->
+                            <date key="date" timeIntervalSinceReferenceDate="605145600">
+                                <!--2020-03-06 00:00:00 +0000-->
                             </date>
                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -176,16 +177,16 @@
                         </connections>
                     </datePicker>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-tw-fGZ">
-                        <rect key="frame" x="142" y="366" width="100" height="100"/>
+                        <rect key="frame" x="145" y="366" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="CSm-VV-wo3"/>
                         </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="prefsIcon" id="7j8-4G-i3i"/>
                     </imageView>
                     <box translatesAutoresizingMaskIntoConstraints="NO" id="yWr-Hp-PAc">
-                        <rect key="frame" x="17" y="16" width="354" height="96"/>
+                        <rect key="frame" x="17" y="16" width="360" height="96"/>
                         <view key="contentView" id="ZzR-Mi-Wjb">
-                            <rect key="frame" x="3" y="3" width="348" height="78"/>
+                            <rect key="frame" x="3" y="3" width="354" height="78"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <scrollView appearanceType="aqua" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-B9-kTi">
@@ -317,7 +318,7 @@
                         </view>
                     </box>
                     <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TOn-AC-Tyi">
-                        <rect key="frame" x="194" y="269" width="176" height="24"/>
+                        <rect key="frame" x="200" y="269" width="176" height="24"/>
                         <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="z4u-en-r5J">
                             <font key="font" metaFont="system"/>
                             <segments>
@@ -370,7 +371,7 @@
                     <constraint firstItem="KUA-qx-CUg" firstAttribute="leading" secondItem="gNx-6D-4hk" secondAttribute="leading" id="zbc-Vg-a9v"/>
                 </constraints>
             </view>
-            <point key="canvasLocation" x="-222.5" y="-33"/>
+            <point key="canvasLocation" x="-206" y="-33"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="zX6-4Q-WqJ"/>
     </objects>

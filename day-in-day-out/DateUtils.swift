@@ -1,6 +1,6 @@
 //
 //  DateUtils
-//  NightsGoneBy
+//  day-in-day-out
 //
 //  Created by Dominik Pich on 6/27/20.
 //
@@ -8,7 +8,7 @@
 import Foundation
 
 extension Date {
-  func NightsGoneBy(_ date: Date?) -> Int {
+  func daysGone(since date: Date?) -> Int {
     guard let sinceDate = date else {
       return 0
     }

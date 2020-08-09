@@ -1,6 +1,6 @@
 //
 //  LaunchAtLoginUtils.swift
-//  NightsGoneBy
+//  day-in-day-out
 //
 //  Created by Dominik Pich on 7/1/20.
 //

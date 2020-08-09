@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B381A45024A82E08002B86C0"
-               BuildableName = "NightsGoneBy.app"
-               BlueprintName = "NightsGoneBy"
-               ReferencedContainer = "container:NightsGoneBy.xcodeproj">
+               BuildableName = "day-in-day-out.app"
+               BlueprintName = "day-in-day-out"
+               ReferencedContainer = "container:day-in-day-out.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B381A45024A82E08002B86C0"
-            BuildableName = "NightsGoneBy.app"
-            BlueprintName = "NightsGoneBy"
-            ReferencedContainer = "container:NightsGoneBy.xcodeproj">
+            BuildableName = "day-in-day-out.app"
+            BlueprintName = "day-in-day-out"
+            ReferencedContainer = "container:day-in-day-out.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B381A45024A82E08002B86C0"
-            BuildableName = "NightsGoneBy.app"
-            BlueprintName = "NightsGoneBy"
-            ReferencedContainer = "container:NightsGoneBy.xcodeproj">
+            BuildableName = "day-in-day-out.app"
+            BlueprintName = "day-in-day-out"
+            ReferencedContainer = "container:day-in-day-out.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

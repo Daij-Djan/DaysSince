@@ -1,6 +1,6 @@
 //
 //  DesktopWindowController.swift
-//  NightsGoneBy
+//  day-in-day-out
 //
 //  Created by Dominik Pich on 6/27/20.
 //

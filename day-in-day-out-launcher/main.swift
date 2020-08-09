@@ -1,6 +1,6 @@
 //
 //  main.swift
-//  NightsGoneByLauncher
+//  day-in-day-outLauncher
 //
 //  Created by Dominik Pich on 7/1/20.
 //
