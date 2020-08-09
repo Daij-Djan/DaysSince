@@ -9,7 +9,7 @@ import Foundation
 import ServiceManagement
 
 //MARK: constants
-fileprivate let launcherIdentifier = "\(Bundle.main.bundleIdentifier!)Launcher"
+fileprivate let launcherIdentifier = "\(Bundle.main.bundleIdentifier!)-launcher"
 
 struct LaunchAtLogin {
   static var isEnabled: Bool {

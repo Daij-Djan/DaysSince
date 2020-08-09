@@ -8,7 +8,7 @@
 import Cocoa
 
 //MARK: constants
-fileprivate let mainBundleId = Bundle.main.bundleIdentifier!.replacingOccurrences(of: "Launcher", with: "")
+fileprivate let mainBundleId = Bundle.main.bundleIdentifier!.replacingOccurrences(of: "-launcher", with: "")
 
 class AppDelegate: NSObject, NSApplicationDelegate {
   func applicationDidFinishLaunching(_ aNotification: Notification) {
