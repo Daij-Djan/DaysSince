@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  day-in-day-out
+
+  Created by Dominik Pich on 8/9/20.
+  
+*/
+
+"CFBundleName" = "day in, day out";
+"CFBundleDisplayName" = "day in, day out";

@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  day-in-day-out
+
+  Created by Dominik Pich on 7/6/20.
+  
+*/
+
+"Day %d" = "Tag %d";

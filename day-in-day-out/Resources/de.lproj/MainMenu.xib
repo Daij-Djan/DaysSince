@@ -20,16 +20,16 @@
         </customObject>
         <menu title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
             <items>
-                <menuItem title="day in, day out" id="1Xt-HY-uBw">
+                <menuItem title="Tag ein, Tag aus" id="1Xt-HY-uBw">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="day in, day out" systemMenu="apple" id="uQy-DD-JDr">
+                    <menu key="submenu" title="Tag ein, Tag aus" systemMenu="apple" id="uQy-DD-JDr">
                         <items>
-                            <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW">
+                            <menuItem title="Einstellungen…" keyEquivalent="," id="BOF-NM-1cW">
                                 <connections>
                                     <action selector="showPrefs" target="Voe-Tx-rLC" id="oaU-6M-ZVv"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Quit day in, day out" keyEquivalent="q" id="4sb-4s-VLi">
+                            <menuItem title="Tag ein, Tag aus Beenden" keyEquivalent="q" id="4sb-4s-VLi">
                                 <connections>
                                     <action selector="terminate:" target="-1" id="Te7-pn-YzF"/>
                                 </connections>
@@ -40,32 +40,32 @@
             </items>
             <point key="canvasLocation" x="97" y="79"/>
         </menu>
-        <window title="Day in, Day out" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="day-in-day-out" animationBehavior="default" id="QvC-M9-y7g" userLabel="day-in-day-out Preferences">
+        <window title="Tag ein, Tag aus" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="day-in-day-out" animationBehavior="default" id="QvC-M9-y7g" userLabel="day-in-day-out Preferences">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
-            <rect key="contentRect" x="335" y="390" width="396" height="486"/>
+            <rect key="contentRect" x="335" y="390" width="394" height="486"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="396" height="486"/>
+                <rect key="frame" x="0.0" y="0.0" width="395" height="486"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aWI-OH-OLO" userLabel="Mark Days Gone Since Date:">
-                        <rect key="frame" x="18" y="334" width="176" height="16"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Mark Days Gone Since Date:" id="ASS-Ry-9aA">
+                        <rect key="frame" x="18" y="334" width="175" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Zähle vergangene Tage seit:" id="ASS-Ry-9aA">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7cN-ch-RY3">
-                        <rect key="frame" x="18" y="305" width="176" height="16"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Scale Of Markings:" id="JRG-A3-LEN">
+                        <rect key="frame" x="18" y="305" width="175" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Größe der Markierungen" id="JRG-A3-LEN">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZqQ-AW-nJm">
-                        <rect key="frame" x="277" y="302" width="101" height="19"/>
+                        <rect key="frame" x="276" y="302" width="101" height="19"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="97" id="Zrg-15-G4W"/>
                         </constraints>
@@ -79,11 +79,11 @@
                         </connections>
                     </slider>
                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="FK3-IZ-KcO">
-                        <rect key="frame" x="130" y="238" width="131" height="5"/>
+                        <rect key="frame" x="130" y="238" width="130" height="5"/>
                     </box>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p2h-9d-Nkl">
-                        <rect key="frame" x="90" y="191" width="193" height="18"/>
-                        <buttonCell key="cell" type="check" title="App Should Show Dock Icon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9DQ-g6-xpG">
+                        <rect key="frame" x="85" y="191" width="201" height="18"/>
+                        <buttonCell key="cell" type="check" title="Anwendung im &quot;Dock&quot; zeigen" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9DQ-g6-xpG">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -96,8 +96,8 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="C9C-mi-aQK" userLabel="ENABLED - App Should Show Menubar Icon">
-                        <rect key="frame" x="90" y="165" width="216" height="18"/>
-                        <buttonCell key="cell" type="check" title="App Should Show Menubar Icon" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KMg-VS-W4d">
+                        <rect key="frame" x="85" y="165" width="226" height="18"/>
+                        <buttonCell key="cell" type="check" title="Anwendungsicon in der Menüliste" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KMg-VS-W4d" userLabel="I">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -121,8 +121,8 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KUA-qx-CUg" userLabel="DISABLED  - App Should Show Menubar Icon">
-                        <rect key="frame" x="90" y="165" width="216" height="18"/>
-                        <buttonCell key="cell" type="check" title="App Should Show Menubar Icon" bezelStyle="regularSquare" imagePosition="left" enabled="NO" state="on" inset="2" id="DmC-nH-WrN">
+                        <rect key="frame" x="85" y="165" width="226" height="18"/>
+                        <buttonCell key="cell" type="check" title="Anwendungsicon in der Menüliste" bezelStyle="regularSquare" imagePosition="left" enabled="NO" state="on" inset="2" id="DmC-nH-WrN">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -135,8 +135,8 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gNx-6D-4hk">
-                        <rect key="frame" x="90" y="139" width="182" height="18"/>
-                        <buttonCell key="cell" type="check" title="App Should Open At Login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="c1S-dC-V5g">
+                        <rect key="frame" x="85" y="139" width="217" height="18"/>
+                        <buttonCell key="cell" type="check" title="Meim Login automatisch starten" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="c1S-dC-V5g">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -149,15 +149,15 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jbh-FR-6ry">
-                        <rect key="frame" x="18" y="274" width="176" height="16"/>
-                        <textFieldCell key="cell" lineBreakMode="clipping" title="Marks Flow Direction:" id="12N-hg-gmd">
+                        <rect key="frame" x="18" y="274" width="175" height="16"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Ausrichtung:" id="12N-hg-gmd">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="30u-mE-raZ">
-                        <rect key="frame" x="279" y="334" width="100" height="28"/>
+                        <rect key="frame" x="278" y="334" width="100" height="28"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="lfh-ex-RlU">
                             <font key="font" metaFont="system"/>
                             <date key="date" timeIntervalSinceReferenceDate="605145600">
@@ -177,16 +177,16 @@
                         </connections>
                     </datePicker>
                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-tw-fGZ">
-                        <rect key="frame" x="146" y="366" width="100" height="100"/>
+                        <rect key="frame" x="145" y="366" width="100" height="100"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="CSm-VV-wo3"/>
                         </constraints>
                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="prefsIcon" id="7j8-4G-i3i"/>
                     </imageView>
                     <box translatesAutoresizingMaskIntoConstraints="NO" id="yWr-Hp-PAc">
-                        <rect key="frame" x="17" y="16" width="362" height="96"/>
+                        <rect key="frame" x="17" y="16" width="361" height="96"/>
                         <view key="contentView" id="ZzR-Mi-Wjb">
-                            <rect key="frame" x="3" y="3" width="356" height="78"/>
+                            <rect key="frame" x="3" y="3" width="355" height="78"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
                                 <scrollView appearanceType="aqua" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="f0A-B9-kTi">
@@ -318,12 +318,12 @@
                         </view>
                     </box>
                     <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TOn-AC-Tyi">
-                        <rect key="frame" x="202" y="269" width="176" height="24"/>
+                        <rect key="frame" x="201" y="269" width="176" height="24"/>
                         <segmentedCell key="cell" borderStyle="border" alignment="left" segmentDistribution="fillEqually" style="rounded" trackingMode="selectOne" id="z4u-en-r5J">
                             <font key="font" metaFont="system"/>
                             <segments>
                                 <segment label="Horizontal" selected="YES"/>
-                                <segment label="Vertical" tag="1"/>
+                                <segment label="Vertikal" tag="1"/>
                             </segments>
                         </segmentedCell>
                         <connections>
