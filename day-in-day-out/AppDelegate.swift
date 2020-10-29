@@ -46,6 +46,11 @@ extension AppDelegate: NSApplicationDelegate {
     NotificationCenter.default.addObserver(forName: NSNotification.Name.NSCalendarDayChanged, object: nil, queue: OperationQueue.main) { _ in
       self.applySettings()
     }
+
+    //act on screen size change
+    NotificationCenter.default.addObserver(forName: NSApplication.didChangeScreenParametersNotification, object: nil, queue: OperationQueue.main) { _ in
+      self.applySettings()
+    }
   }
 }
 
